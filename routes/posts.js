@@ -17,10 +17,10 @@ router.get("/",function(req,  res){
 });
 
 // New
-
 router.get("/new",function(req,res){
     res.render("posts/new");
 })
+
 
 //create
 router.post("/", function(req,res){
@@ -29,6 +29,7 @@ router.post("/", function(req,res){
         res.redirect("/posts");
     });
 });
+
 
 // show
 router.get("/:id", function(req, res){

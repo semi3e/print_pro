@@ -1,18 +1,20 @@
-nav.navbar.navbar-default
-    div.container
-        div.navbar-header
-            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            div.navbar-brand print_pro
-        div.collapse.navbar-collapse#myNavbar
-            ul.nav.navbar-nav
-                li
-                    a(href='/') 홈
-                li
-                    a(href='/manual') 메뉴얼
-                li
-                    a(href='/posts') 명진당
-                li
-                    a(href='/posts') 오공학관
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='/') print_pro
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarNavDropdown.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item.active
+        a.nav-link(href='/')
+          | 홈 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='/manual') 메뉴얼
+      li.nav-item
+        a.nav-link(href='/manual') 사용법
+      li.nav-item.dropdown
+        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          | 인쇄실
+        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+          a.dropdown-item(href='/posts') 오공학관
+          a.dropdown-item(href='/posts') 명진당
