@@ -1,0 +1,17 @@
+extends ../partials/layout
+
+block content
+    div
+        a(href='/posts/new') 글쓰기
+    table
+        thead
+            tr
+                th 제목
+                th 날짜
+   
+        tbody
+                if(posts ==null || posts.lengt)
+                    tr
+                    td 글이 없습니다.
+        
+        

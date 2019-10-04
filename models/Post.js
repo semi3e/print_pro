@@ -9,7 +9,6 @@ var postSchema = mongoose.Schema({ // 1
     body:{type:String},
     createdAt:{type:Date, default:Date.now}, // 2
     updatedAt:{type:Date},
-    color_black:{type:String, required:true}
   },{
     toObject:{virtuals:true} // 4
   });
