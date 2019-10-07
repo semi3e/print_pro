@@ -8,6 +8,8 @@ var mongoose = require("mongoose");
 var postSchema = mongoose.Schema({ // 1
     title:{type:String, required:true},
     body:{type:String},
+    allblack:{type:String},
+    double_side:{type:String}
     // createdAt:{type:Date, default:Date.now}, // 2
     // updatedAt:{type:Date},
   },{

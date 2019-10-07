@@ -7,9 +7,18 @@ block content
         thead
             tr
                 th 제목
-                th 날짜
+                th 내용
    
-        tbody            
+        tbody       
             each p in posts
-                td=p.title
-                td=p.body
+                tr
+                    td=p.title
+                    td=p.body
+                    if p.allblack=="on" 
+                        td 흑백
+                    else
+                        td 컬러
+                    if p.double_side=="on"
+                        td 양면
+                    else
+                        td 단면
