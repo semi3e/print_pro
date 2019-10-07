@@ -9,9 +9,7 @@ block content
                 th 제목
                 th 날짜
    
-        tbody
-                if(posts ==null || posts.lengt)
-                    tr
-                    td 글이 없습니다.
-        
-        
+        tbody            
+            each p in posts
+                td=p.title
+                td=p.body

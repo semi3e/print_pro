@@ -1,0 +1,26 @@
+extends ../partials/layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+            h1.display-4.m-b-2 회원가입
+            
+            // 회원가입 form
+            from(method='POST' action='/register')
+                div.form-group
+                    label(for='name') 이름:
+                    input#name.form-control(type='text', placeholder='first and last' name='name')
+                div.form-group
+                    label(for='email') 이메일:
+                    input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                div.form-group
+                    label(for='favoriteBook') 가장 좋아하는 책:
+                    input#favoriteBook.form-control(type='text', placeholder='title of book' name='favoriteBook')
+                div.form-group
+                    label(for='pw') 비밀번호:
+                    input#pw.form-control(type='password' name='password')
+                div.form-group
+                    label(for='pw2') 비밀번호 확인:
+                    input#pw2.form-control(type='password' name='confirmPassword')
+                button.btn.btn-primary(type='submit') 회원가입
