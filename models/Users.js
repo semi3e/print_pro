@@ -12,5 +12,5 @@ var userSchema = mongoose.Schema({
 
 // model export
 
-var Register =mongoose.model("register",registerSchema);
-module.exports = Register;
+var User=mongoose.model("user",userSchema);
+module.exports = User;
