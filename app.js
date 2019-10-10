@@ -6,6 +6,8 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var app = express();
 var mongoose = require('mongoose');//몽구스 db
+var flash = require('connect-flash');
+var session = require('express-session');
 
 // //DB
 //mongodb+srv://admin:administrator@cluster0-hecuu.mongodb.net/test?retryWrites=true&w=majority// var db = mongoose.connection;
@@ -40,6 +42,23 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// session을 사용
+app.use(session({
+  name: 'mjoverflow',
+  resave: true,
+  saveUninitialized: true,
+  secret: 'long-longlonglong123asdasdaszxcasdq1123123sdasdlkjlkjaflkvna;ls123'
+}));
+
+
+app.use(flash()); // flash message를 사용할 수 있도록
+app.use(function(req, res, next) {
+  // res.locals.currentUser = req.user;  // passport는 req.user로 user정보 전달
+  res.locals.flashMessages = req.flash();
+  next();
+});
+
 
 
 //route
