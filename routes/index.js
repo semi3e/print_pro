@@ -3,8 +3,7 @@ var router = express.Router();
 
 /* main page. */
 router.get('/', function(req, res, next) {
-  // test
-  res.render('home/main', { title: 'print_pro',message: '프젝 화이팅!' });
+  res.render('home/main', { title: 'ph-1', message: 'Print Highpass number 1' });
 });
 
 /* manual page. */
@@ -17,11 +16,9 @@ router.get('/myongjin', function(req,res,next){
   res.render('home/myongjin');
 });
 
-/*ogong page. */
-router.get('/ogong', function(req,res,netx){
-  res.render('home/ogong');
+/*5gong page. */
+router.get('/5gong', function(req,res,next){
+  res.render('home/5gong');
 });
-
-
 
 module.exports = router;

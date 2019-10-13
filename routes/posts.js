@@ -4,10 +4,11 @@
 var express= require("express");
 var router=express.Router();
 var Post=require("../models/Post");
+var { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 
 //Index
 
-router.get("/", async function(req,  res){
+router.get("/", isLoggedIn, async function(req, res) {
   var posts = await Post.find();
     // Post.find({})
     // .sort("-createdAt")

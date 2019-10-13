@@ -1,5 +1,4 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  a.navbar-brand(href='/') print_pro
   button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
     span.navbar-toggler-icon
   #navbarNavDropdown.collapse.navbar-collapse
@@ -11,10 +10,17 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
       li.nav-item
         a.nav-link(href='/manual') 메뉴얼
       li.nav-item
-        a.nav-link(href='/register') 회원가입
+        a.nav-link(href='/page/join') 회원가입
+      li.nav-item
+        a.nav-link(href='/page/login') 로그인
+      li.nav-item
+        a.nav-link(href='/auth/logout') 로그아웃
       li.nav-item.dropdown
         a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
           | 인쇄실
         .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-          a.dropdown-item(href='/posts') 오공학관
+          a.dropdown-item(href='/posts') 1공학관
+          a.dropdown-item(href='/posts') 3공학관
+          a.dropdown-item(href='/posts') 5공학관
           a.dropdown-item(href='/posts') 명진당
+          a.dropdown-item(href='/posts') 차세대과학관

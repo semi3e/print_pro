@@ -1,0 +1,15 @@
+extends ../partials/layout
+
+block content
+
+    h1 로그인
+    
+    // 로그인 form
+    form(method='post' action='/auth/log')
+        label(for='id') 아이디:
+        input#name(type='text', placeholder='id' name='id')
+
+        label(for='password') 비밀번호:
+        input#password(type='password' name='password')
+
+        button(type='submit') 로그인

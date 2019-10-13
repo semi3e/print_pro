@@ -7,13 +7,13 @@ block content
             h1.display-4.m-b-2 회원가입
             
             // 회원가입 form
-            form(method='POST' action='/register')
+            form(method='post' action='/auth/reg')
                 div.form-group
                     label(for='id') 아이디:
-                    input#name.form-control(type='text', placeholder='ID' name='id')
+                    input#name.form-control(type='text', placeholder='id' name='id')
                 div.form-group
                     label(for='name') 이름:
-                    input#name.form-control(type='text', placeholder='first and last' name='name')
+                    input#name.form-control(type='text', placeholder='name' name='name')
                 div.form-group
                     label(for='email') 이메일:
                     input#email.form-control(type='email', placeholder='name@email.com' name='email')
