@@ -18,6 +18,7 @@ function validSignupForm (form){
     var password = form.password || "";
     var confirmpassword = form.confirmpassword || "";
     
+    // 입력한 폼에서 양 옆의 공백 제거
     id = id.trim();
     name = name.trim();
     email = email.trim();
