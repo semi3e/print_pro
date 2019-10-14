@@ -76,9 +76,9 @@ router.post('/reg', isNotLoggedIn, async (req, res, next) => {
    //회원 가입 폼 검사하고 req.body로 넘어옴
    var err = validSignupForm(req.body , {needpw: true});
    if(err){
-     // flash 설정은 나중에
+     // 회원가입 폼에 에러가 있으면 이전 화면으로
      req.flash('danger', err);
-     return res.redirect('/register');
+     return res.redirect('back');
    }
 
  // 가입된 유저인지 확인
